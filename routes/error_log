@@ -1,0 +1,124 @@
+[21-Jul-2023 06:04:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/auth.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/auth.php on line 14
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/auth.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/auth.php on line 14
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/api.php on line 17
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/api.php on line 17
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/downtownguss/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/console.php on line 17
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/downtownguss/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/console.php on line 17
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/downtownguss/public_html/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/channels.php on line 16
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/downtownguss/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/console.php on line 17
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/downtownguss/public_html/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/channels.php on line 16
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/downtownguss/public_html/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/channels.php on line 16
+[21-Jul-2023 06:04:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/downtownguss/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/console.php on line 17
+[21-Jul-2023 06:04:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/downtownguss/public_html/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/channels.php on line 16
+[21-Jul-2023 06:04:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/downtownguss/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/console.php on line 17
+[21-Jul-2023 06:06:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/downtownguss/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/console.php on line 17
+[21-Jul-2023 06:06:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/downtownguss/public_html/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/channels.php on line 16
+[21-Jul-2023 06:07:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/api.php on line 17
+[21-Jul-2023 06:07:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/api.php on line 17
+[21-Jul-2023 06:08:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 06:08:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/auth.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/auth.php on line 14
+[21-Jul-2023 17:04:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/downtownguss/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/console.php on line 17
+[21-Jul-2023 17:05:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/downtownguss/public_html/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/channels.php on line 16
+[21-Jul-2023 17:05:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/web.php on line 17
+[21-Jul-2023 17:05:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/downtownguss/public_html/routes/auth.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/routes/auth.php on line 14

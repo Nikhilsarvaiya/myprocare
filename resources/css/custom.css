@@ -1,0 +1,7 @@
+.choices[data-type*=select-one] {
+    margin-bottom: 0 !important;
+}
+
+.choices{
+    margin-bottom: 0 !important;
+}
