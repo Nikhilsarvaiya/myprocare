@@ -31,12 +31,6 @@
                             <a href="#" class=" hover:underline">About</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Careers</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Brand Center</a>
-                        </li>
-                        <li class="mb-4">
                             <a href="#" class="hover:underline">Blog</a>
                         </li>
                     </ul>
@@ -53,9 +47,6 @@
                         <li class="mb-4"><a href="#" class="hover:underline">
                             </a><a href="#" class="hover:underline">Contact Us</a>
                         </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Account Delete Request</a>
-                        </li>
                     </ul>
                 </div>
                 <div>
@@ -63,9 +54,6 @@
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Privacy Policy</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Licensing</a>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Terms & Conditions</a>
@@ -78,11 +66,6 @@
                         <li class="mb-4">
                             <a href="#" class=" hover:underline">About</a>
                         </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Careers</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Brand Center</a>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Blog</a>
