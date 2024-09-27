@@ -1,0 +1,4 @@
+[21-Jul-2023 17:05:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/downtownguss/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/app/Console/Kernel.php on line 8

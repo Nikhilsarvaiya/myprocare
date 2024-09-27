@@ -1,0 +1,300 @@
+[21-Jul-2023 06:04:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/database.php on line 18
+[21-Jul-2023 06:04:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/logging.php on line 21
+[21-Jul-2023 06:04:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/database.php on line 18
+[21-Jul-2023 06:04:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/services.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/database.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/logging.php on line 21
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/services.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/cache.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/cache.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/broadcasting.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/downtownguss/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/view.php on line 17
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/broadcasting.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/filesystems.php on line 16
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/broadcasting.php on line 18
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/hashing.php on line 32
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/downtownguss/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/view.php on line 17
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/hashing.php on line 32
+[21-Jul-2023 06:04:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/queue.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/filesystems.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/downtownguss/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/view.php on line 17
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/queue.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/services.php on line 18
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/app.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/app.php on line 19
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/queue.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/app.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/app.php on line 19
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/sanctum.php on line 18
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/sanctum.php on line 18
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/app.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/app.php on line 19
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/sanctum.php on line 18
+[21-Jul-2023 06:04:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/services.php on line 18
+[21-Jul-2023 06:04:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/sanctum.php on line 18
+[21-Jul-2023 06:04:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/filesystems.php on line 16
+[21-Jul-2023 06:04:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/downtownguss/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/view.php on line 17
+[21-Jul-2023 06:04:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[21-Jul-2023 06:04:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/services.php on line 18
+[21-Jul-2023 06:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[21-Jul-2023 06:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/sanctum.php on line 18
+[21-Jul-2023 06:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/filesystems.php on line 16
+[21-Jul-2023 06:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/session.php on line 21
+[21-Jul-2023 06:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[21-Jul-2023 06:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/queue.php on line 16
+[21-Jul-2023 06:04:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[21-Jul-2023 06:04:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[21-Jul-2023 06:04:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/cache.php on line 18
+[21-Jul-2023 06:04:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:04:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/app.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/app.php on line 19
+[21-Jul-2023 06:04:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/session.php on line 21
+[21-Jul-2023 06:05:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/broadcasting.php on line 18
+[21-Jul-2023 06:06:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/cache.php on line 18
+[21-Jul-2023 06:06:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/queue.php on line 16
+[21-Jul-2023 06:06:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/queue.php on line 16
+[21-Jul-2023 06:06:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/services.php on line 18
+[21-Jul-2023 06:06:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/logging.php on line 21
+[21-Jul-2023 06:06:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/app.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/app.php on line 19
+[21-Jul-2023 06:06:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/downtownguss/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/view.php on line 17
+[21-Jul-2023 06:06:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/session.php on line 21
+[21-Jul-2023 06:07:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:07:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/mail.php on line 16
+[21-Jul-2023 06:07:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/cache.php on line 18
+[21-Jul-2023 06:07:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[21-Jul-2023 06:07:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[21-Jul-2023 06:07:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/services.php on line 18
+[21-Jul-2023 06:07:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/database.php on line 18
+[21-Jul-2023 06:07:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/database.php on line 18
+[21-Jul-2023 06:07:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/sanctum.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/sanctum.php on line 18
+[21-Jul-2023 06:07:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/filesystems.php on line 16
+[21-Jul-2023 06:07:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/hashing.php on line 32
+[21-Jul-2023 17:05:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21
+[23-Jul-2023 03:08:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/downtownguss/public_html/config/media-library.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/downtownguss/public_html/config/media-library.php on line 21

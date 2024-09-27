@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+
+.tagify__tag__removeBtn{
+    @apply dark:text-white
+}
+
+@tailwind utilities;
