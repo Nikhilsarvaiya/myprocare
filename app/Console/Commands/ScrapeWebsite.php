@@ -36,16 +36,16 @@ class ScrapeWebsite extends Command
         // Extract article titles and URLs
         $html = $response->getBody()->getContents();
         $crawler = new Crawler($html);
-        $articles = $crawler->filter('.blog-post')->each(function ($node) {
-            $title = $node->filter('.post-title')->text();
-            $url = $node->filter('.post-title a')->attr('href');
-            return compact('title', 'url');
+        $articles = $crawler->filter('.banner__full')->each(function ($node) {
+            $title = $node->filter('.container h1')->text();
+            // $url = $node->filter('.col-md-4 col-sm-4 col-xs-12 text-center a')->attr('href');
+            return compact('title');
         });
 
         // Display the scraped data
         foreach ($articles as $article) {
             $this->info("Title: {$article['title']}");
-            $this->info("URL: {$article['url']}");
+            // $this->info("URL: {$article['url']}");
             $this->line('------------------');
         }
     }
