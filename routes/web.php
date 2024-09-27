@@ -1,9 +1,13 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ScrapingController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', [\App\Http\Controllers\Front\PageController::class, 'welcome'])->name('welcome');
+
+Route::get('/v1/scraping/scrape-quotes', [ScrapingController::class, 'scrapeQuotes']);
+
+
 Route::get('/', function () {
     return view('welcome');
 });
