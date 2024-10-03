@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/v1/scraping/scrape-quotes', [ScrapingController::class, 'scrapeQuotes']);
 Route::get('/v1/scraping/scrape-data', [ScrapingController::class, 'scrapeData']);
+Route::get('/scrape-login', [ScrapingController::class, 'scrapeLogin']);
 
 
 Route::get('/', function () {
