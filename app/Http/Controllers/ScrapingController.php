@@ -9,6 +9,7 @@ use Symfony\Component\BrowserKit\HttpBrowser;
 use Symfony\Component\HttpClient\HttpClient;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Cookie\CookieJar;
 use Symfony\Component\DomCrawler\Crawler;
 
 use Illuminate\Support\Facades\Http;
@@ -83,7 +84,7 @@ class ScrapingController extends Controller
             // Extract article titles and URLs
             $html = $response->getBody()->getContents();
 
-            dd($html);
+            dd($response);
             // Handle cookies for further authenticated requests
             $cookies = $response->cookies();
 
@@ -106,6 +107,61 @@ class ScrapingController extends Controller
         } else {
             return 'Login failed!';
         }
+    }
+
+    public function scrapeWithLogin()
+    {
+        // Initialize Guzzle client
+        $client = new Client([
+            'base_uri' => 'https://schools.procareconnect.com', // Replace with the site you want to scrape
+            'cookies' => true,  // Guzzle will automatically manage cookies
+        ]);
+
+        // CookieJar to store session cookies
+        $jar = new CookieJar();
+
+        // Send POST request to login
+        $response = $client->post('/login', [
+            'cookies' => $jar,  // Pass the CookieJar
+            'form_params' => [
+                'username' => 'pgoswami@varemar.com',  // Replace with actual login field name
+                'password' => 'V@remar123##',  // Replace with actual password field name
+            ],
+        ]);
+
+        
+        // Check if login is successful
+        if ($response->getStatusCode() === 200) {
+            // Proceed to scrape authenticated pages
+            return $this->scrapeAuthenticatedPage($client, $jar);
+        }
+
+        return response()->json(['error' => 'Login failed'], 401);
+    }
+
+    // Function to scrape authenticated pages
+    public function scrapeAuthenticatedPage(Client $client, CookieJar $jar)
+    {
+        // Make GET request to the page you want to scrape
+        $response = $client->get('https://schools.procareconnect.com/reports', [
+            'cookies' => $jar,  // Pass the CookieJar to maintain the session
+        ]);
+
+        // Get the response body
+        $htmlContent = $response->getBody()->getContents();
+
+        // Use DomCrawler to extract specific content
+        $crawler = new Crawler($htmlContent);
+
+        dd($htmlContent);
+
+        // For example, extract all titles from a page
+        $titles = $crawler->filter('h1')->each(function (Crawler $node, $i) {
+            return $node->text();
+        });
+
+        // Return extracted data
+        return response()->json($titles);
     }
 
 }
