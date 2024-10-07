@@ -60,7 +60,7 @@
                 <a href="{{ route('welcome') }}" class="flex items-center justify-between">
                     <x-application-logo class="mr-3 w-10 h-10 fill-current text-gray-500"/>
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        DBA
+                        My Procare
                     </span>
                 </a>
             </div>
@@ -115,22 +115,6 @@
                                         My profile
                                     </a>
                                 </li>
-                                <li>
-                                    <a
-                                        href="{{ route('user.wallet-transactions.index') }}"
-                                        class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                                    >
-                                        Wallet
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="{{ route('profile.my-qr') }}"
-                                        class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                                    >
-                                        My QR
-                                    </a>
-                                </li>
                             </ul>
                             <ul
                                 class="pt-1"
@@ -180,7 +164,7 @@
                             <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                         </svg>
                     </x-web.sidebar-menu>
-                    <x-web.sidebar-menu
+                    {{-- <x-web.sidebar-menu
                         :label="'Users'"
                         :href="route('admin.users.index')"
                         :active="request()->routeIs('admin.users.index')"
@@ -196,7 +180,7 @@
                         <i class="fa-regular fa-calendar fa-lg ms-1"></i>
                     </x-web.sidebar-menu>
 
-                    <x-web.sidebar-menu
+                     <x-web.sidebar-menu
                         :label="'Deals'"
                         :href="route('admin.deals.index')"
                         :active="request()->routeIs('admin.deals.index')"
@@ -271,7 +255,7 @@
                         :dropdown-items="$dropdownItems"
                     >
                         <i class="fa-solid fa-gear fa-lg"></i>
-                    </x-web.sidebar-menu>
+                    </x-web.sidebar-menu> --}}
                 @else
                     <x-web.sidebar-menu
                         :label="'Dashboard'"
@@ -290,7 +274,7 @@
                         </svg>
                     </x-web.sidebar-menu>
 
-                    <x-web.sidebar-menu
+                    {{-- <x-web.sidebar-menu
                         :label="'Events'"
                         :href="route('user.events.index')"
                         :active="request()->routeIs('user.events.index')"
@@ -344,7 +328,7 @@
                         :active="request()->routeIs('user.road-closures.index')"
                     >
                         <i class="fa-solid fa-road-circle-exclamation fa-lg"></i>
-                    </x-web.sidebar-menu>
+                    </x-web.sidebar-menu> --}}
                 @endif
             </ul>
         </div>

@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Log;
 use Exception;
+use League\Csv\Reader;
+use League\Csv\UnavailableStream;
+use App\Models\Students;
+use Excel;
+// use Maatwebsite\Excel\Facades\Excel;
 
 class ScrapingController extends Controller
 {
@@ -316,6 +321,49 @@ class ScrapingController extends Controller
                 foreach($data as $key => $reports){
 
                     $get_data = $this->apiReports($reports['id']);
+
+                    $file_path = 'public/reports/' . $get_data;
+
+                    if (Storage::exists($file_path)) {
+                        
+                        try {
+                            $filePath = Storage::path($file_path);
+                            
+                            // // Load the CSV file
+                            // $csv = Reader::createFromPath($filePath, 'r');
+                            // $csv->setHeaderOffset(0); // Set the header offset to use the first row as header
+                            
+                            // // Get the records from the CSV
+                            // $rows = $csv->getRecords();
+                            
+                            // foreach ($rows as $row) {
+                            //     $student = Students::updateOrCreate([
+                            //         'fname' => $row['First_Name'] == '' ? null : $row['First_Name'],
+                            //         'lname' => $row['Last_Name'] == '' ? null : $row['Last_Name'],
+                            //         'room' => $row['Room'] == '' ? null : $row['Room'],
+                            //         'type' => 'hold',
+                            //         'adminssion_date' => $row['Admission_Date'] == '' ? null : $row['Admission_Date'],
+                            //         'enrollment_status' => $row['Enrollment_Status'] == '' ? null : $row['Enrollment_Status'],
+                            //     ]);
+                            // }
+
+                            Excel::load($filePath, function ($reader) {
+
+                                foreach ($reader->toArray() as $row) {
+                                    Students::firstOrCreate($row);
+                                }
+                            });
+
+                            dd("exists==".$filePath);
+                            
+
+                        } catch (UnavailableStream|Exception $e) {
+                            // return response()->json(['message' => $e->getMessage()], 400);
+                            Log::error('hold report api save data error: ' . $e->getMessage());
+                        }
+                    }
+
+                    dd($file_path);
 
                     return $get_data;
                 }

@@ -5,7 +5,7 @@
     <div class="flex justify-between">
         <x-web.page-title :title="'Send Reward Point'"/>
 
-        <a href="{{ route('user.wallet-transactions.index') }}">
+        <a href="#">
             <x-secondary-button>
                 <i class="fa-solid fa-arrow-left"></i>
             </x-secondary-button>
