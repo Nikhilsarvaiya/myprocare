@@ -164,7 +164,7 @@
                             <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                         </svg>
                     </x-web.sidebar-menu>
-                    {{-- <x-web.sidebar-menu
+                    <x-web.sidebar-menu
                         :label="'Users'"
                         :href="route('admin.users.index')"
                         :active="request()->routeIs('admin.users.index')"
@@ -172,7 +172,7 @@
                         <i class="fa-solid fa-user fa-lg ms-1"></i>
                     </x-web.sidebar-menu>
 
-                    <x-web.sidebar-menu
+                    {{-- <x-web.sidebar-menu
                         :label="'Events'"
                         :href="route('admin.events.index')"
                         :active="request()->routeIs('admin.events.index')"

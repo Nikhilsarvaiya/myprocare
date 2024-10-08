@@ -12,6 +12,8 @@ use League\Csv\UnavailableStream;
 use App\Models\Students;
 use Excel;
 // use Maatwebsite\Excel\Facades\Excel;
+use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
+use PhpOffice\PhpSpreadsheet\Writer\Csv;
 
 class ScrapingController extends Controller
 {
@@ -216,6 +218,25 @@ class ScrapingController extends Controller
                         Storage::put('public/reports/' . $filename, $contents);
                         // return response()->download(storage_path('app/public/reports/' . $filename));
 
+
+                        // xlsx to csv
+                        $file_path = 'public/reports/' . $filename;
+                        if (Storage::exists($file_path)) {
+                            $filePath = Storage::path($file_path);
+                            
+                            $reader = new Xlsx();
+                            // set the Read data only option
+                            $reader->setReadDataOnly(true);
+                            $spreadsheet = $reader->load($filePath);
+                            
+                            $writer = (new Csv($spreadsheet))
+                                ->setEnclosure('')
+                                ->setLineEnding("\n")
+                                ->setDelimiter(';');
+                            $writer->setSheetIndex(0);
+                            $writer->save($filePath.'.csv');
+                        }
+
                         return $filename;
 
                         break;
@@ -322,37 +343,32 @@ class ScrapingController extends Controller
 
                     $get_data = $this->apiReports($reports['id']);
 
-                    $file_path = 'public/reports/' . $get_data;
-
+                    
+                    $file_path = 'public/reports/' . $get_data.'.csv';
+                    
                     if (Storage::exists($file_path)) {
                         
                         try {
                             $filePath = Storage::path($file_path);
                             
-                            // // Load the CSV file
-                            // $csv = Reader::createFromPath($filePath, 'r');
-                            // $csv->setHeaderOffset(0); // Set the header offset to use the first row as header
+                            // Load the CSV file
+                            $csv = Reader::createFromPath($filePath, 'r');
+                            $csv->setHeaderOffset(0); // Set the header offset to use the first row as header
                             
-                            // // Get the records from the CSV
-                            // $rows = $csv->getRecords();
+                            // Get the records from the CSV
+                            $rows = $csv->getRecords();
+                            dd($rows);
                             
-                            // foreach ($rows as $row) {
-                            //     $student = Students::updateOrCreate([
-                            //         'fname' => $row['First_Name'] == '' ? null : $row['First_Name'],
-                            //         'lname' => $row['Last_Name'] == '' ? null : $row['Last_Name'],
-                            //         'room' => $row['Room'] == '' ? null : $row['Room'],
-                            //         'type' => 'hold',
-                            //         'adminssion_date' => $row['Admission_Date'] == '' ? null : $row['Admission_Date'],
-                            //         'enrollment_status' => $row['Enrollment_Status'] == '' ? null : $row['Enrollment_Status'],
-                            //     ]);
-                            // }
-
-                            Excel::load($filePath, function ($reader) {
-
-                                foreach ($reader->toArray() as $row) {
-                                    Students::firstOrCreate($row);
-                                }
-                            });
+                            foreach ($rows as $row) {
+                                $student = Students::updateOrCreate([
+                                    'fname' => $row['First Name'] == '' ? null : $row['First Name'],
+                                    'lname' => $row['Last Name'] == '' ? null : $row['Last Name'],
+                                    'room' => $row['Room'] == '' ? null : $row['Room'],
+                                    'type' => 'hold',
+                                    'adminssion_date' => $row['Admission Date'] == '' ? null : $row['Admission Date'],
+                                    'enrollment_status' => $row['Enrollment Status'] == '' ? null : $row['Enrollment Status'],
+                                ]);
+                            }
 
                             dd("exists==".$filePath);
                             
