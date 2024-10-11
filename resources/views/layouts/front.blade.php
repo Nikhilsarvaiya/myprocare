@@ -60,7 +60,7 @@
                 </button>
 
                 <a href="/" class="flex items-center justify-between">
-                    <x-application-logo class="mr-3 w-10 h-10 fill-current text-gray-500"/>
+                    {{-- <x-application-logo class="mr-3 w-10 h-10 fill-current text-gray-500"/> --}}
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                         My Procare
                     </span>
