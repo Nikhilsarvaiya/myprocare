@@ -9,7 +9,7 @@
         <x-web.table-search-bar :url="route('admin.students.index')" />
 
         <div class="mb-3 flex items-center space-x-3">
-            <a href="{{ route('api-call-report') }}">
+            <a href="{{ route('admin.students.index') }}">
                 <x-secondary-button>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-4 h-4">
@@ -18,9 +18,9 @@
                     </svg>
                 </x-secondary-button>
             </a>
-            <a href="{{ route('admin.users.create') }}">
+            <a href="{{ route('api-call-report') }}">
                 
-                <form action="{{ route('admin.users.create') }}" method="Post"
+                <form action="{{ route('api-call-report') }}" method="Post"
                 onclick="return confirm('Are you sure you want to fetch the data manually ? It will automatically store the data on a weekly basis.')">
                 @csrf
                 @method('GET')

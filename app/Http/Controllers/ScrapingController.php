@@ -806,6 +806,8 @@ class ScrapingController extends Controller
             $apiInactiveReport = $this->apiInactiveReport();
 
             Log::info('call report api success: apiHoldReport = ' . $apiHoldReport . ', apiActiveReport= ' . $apiActiveReport . ', apiInactiveReport= ' . $apiInactiveReport);
+
+            return redirect()->route('admin.students.index');
         } catch (\Exception $exception) {
             Log::error('call report api error: ' . $exception->getMessage());
         }
