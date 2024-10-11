@@ -8,6 +8,14 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Log;
 use Exception;
+use League\Csv\Reader;
+use League\Csv\UnavailableStream;
+use App\Models\Students;
+use Excel;
+// use Maatwebsite\Excel\Facades\Excel;
+use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
+use PhpOffice\PhpSpreadsheet\Writer\Csv;
+use Carbon\Carbon;
 
 class ScrapeWebsite extends Command
 {
@@ -233,7 +241,6 @@ class ScrapeWebsite extends Command
                 
                 foreach($data['reports'] as $key => $reports){
 
-                    
                     if($reports['id']==$report_id){
                         
                         $url = $reports['xls_url']; // Replace this with the actual URL of the file/image
@@ -242,6 +249,25 @@ class ScrapeWebsite extends Command
                         $filename = basename($file);
                         Storage::put('public/reports/' . $filename, $contents);
                         // return response()->download(storage_path('app/public/reports/' . $filename));
+                        
+                        
+                        // xlsx to csv
+                        $file_path = 'public/reports/' . $filename;
+                        if (Storage::exists($file_path)) {
+                            $filePath = Storage::path($file_path);
+                            
+                            $reader = new Xlsx();
+                            // set the Read data only option
+                            $reader->setReadDataOnly(true);
+                            $spreadsheet = $reader->load($filePath);
+                            
+                            $writer = (new Csv($spreadsheet))
+                                ->setEnclosure('')
+                                ->setLineEnding("\n")
+                                ->setDelimiter(';');
+                            $writer->setSheetIndex(0);
+                            $writer->save($filePath.'.csv');
+                        }
 
                         return $filename;
 
@@ -348,6 +374,79 @@ class ScrapeWebsite extends Command
                 foreach($data as $key => $reports){
 
                     $get_data = $this->apiReports($reports['id']);
+
+                    
+                    $file_path = 'public/reports/' . $get_data.'.csv';
+                    
+                    if (Storage::exists($file_path)) {
+                        
+                        try {
+                            $filePath = Storage::path($file_path);
+                            $content = file($filePath);
+                            $array = array();
+
+                            for ($i = 1; $i < count($content); $i++) {
+                                $line = explode(',', $content[$i]);
+                                for ($j = 0; $j < count($line); $j++) {
+                                    $array[$i][$j + 1] = $line[$j];
+                                }
+                            }
+
+                            $k = $k2 = count($array) + 1;
+
+                            $address_1 = null;
+                            $address_2 = null;
+                            $city = null;
+                            $country_code = null;
+                            $zip = null;
+
+
+                            if($array[1]){
+                                $address_1 = $array[1][1];
+                            }
+                            if($array[2]){
+                                $address_2 = $array[2][1];
+                                $city = $array[2][2];
+                                $country_code = $array[2][3];
+                                $zip = $array[2][4];
+                            }
+
+                            $student_arr_data = null;
+
+                            for ($i = 1; $i < $k; $i++) {
+
+                                if($i>4){  // $i>4
+
+                                    $student_arr_data = explode(";",$array[$i][1]);
+                                    
+                                    $data = [
+                                        'fname' => $student_arr_data[0] == '' ? null : $student_arr_data[0],
+                                        'lname' => $student_arr_data[1] == '' ? null : $student_arr_data[1],
+                                        'room' => $student_arr_data[2] == '' ? null : $student_arr_data[2],
+                                        'type' => 'hold',
+                                        'adminssion_date' => $student_arr_data[3] == '' ? null : \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($student_arr_data[3]),
+                                        'nj_area' => $address_1 == '' ? null : str_replace(";","",$address_1),
+                                        'address' => $address_2 == '' ? null : $address_2,
+                                        'city' => $city == '' ? null : $city,
+                                        'country_code' => $country_code == '' ? null : $country_code,
+                                        'zip' => str_replace(";","",$zip),
+                                        'enrollment_status' => $student_arr_data[4] == '' ? null : $student_arr_data[4],
+                                    ];
+
+                                    $student = Students::updateOrCreate($data);
+                                }
+
+                            }
+                            // dd("exists==".$filePath);
+                            Log::info('hold report file save to database');
+                            return $get_data;
+                            
+
+                        } catch (UnavailableStream|Exception $e) {
+                            // return response()->json(['message' => $e->getMessage()], 400);
+                            Log::error('hold report api save data error: ' . $e->getMessage());
+                        }
+                    }
 
                     return $get_data;
                 }
@@ -460,6 +559,78 @@ class ScrapeWebsite extends Command
                 foreach($data as $key => $reports){
 
                     $get_data = $this->apiReports($reports['id']);
+
+                    $file_path = 'public/reports/' . $get_data.'.csv';
+                    
+                    if (Storage::exists($file_path)) {
+                        
+                        try {
+                            $filePath = Storage::path($file_path);
+                            $content = file($filePath);
+                            $array = array();
+
+                            for ($i = 1; $i < count($content); $i++) {
+                                $line = explode(',', $content[$i]);
+                                for ($j = 0; $j < count($line); $j++) {
+                                    $array[$i][$j + 1] = $line[$j];
+                                }
+                            }
+
+                            $k = $k2 = count($array) + 1;
+
+                            $address_1 = null;
+                            $address_2 = null;
+                            $city = null;
+                            $country_code = null;
+                            $zip = null;
+
+
+                            if($array[1]){
+                                $address_1 = $array[1][1];
+                            }
+                            if($array[2]){
+                                $address_2 = $array[2][1];
+                                $city = $array[2][2];
+                                $country_code = $array[2][3];
+                                $zip = $array[2][4];
+                            }
+
+                            $student_arr_data = null;
+
+                            
+                            for ($i = 1; $i < $k; $i++) {
+                                
+                                if($i>4){  // $i>4
+
+                                    $student_arr_data = explode(";",$array[$i][1]);
+                                    
+                                    $data = [
+                                        'fname' => $student_arr_data[0] == '' ? null : $student_arr_data[0],
+                                        'lname' => $student_arr_data[1] == '' ? null : $student_arr_data[1],
+                                        'room' => $student_arr_data[2] == '' ? null : $student_arr_data[2],
+                                        'type' => 'active',
+                                        'adminssion_date' => $student_arr_data[3] == '' ? null : \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($student_arr_data[3]),
+                                        'nj_area' => $address_1 == '' ? null : str_replace(";","",$address_1),
+                                        'address' => $address_2 == '' ? null : $address_2,
+                                        'city' => $city == '' ? null : $city,
+                                        'country_code' => $country_code == '' ? null : $country_code,
+                                        'zip' => str_replace(";","",$zip),
+                                        'enrollment_status' => $student_arr_data[4] == '' ? null : $student_arr_data[4],
+                                    ];
+
+                                    $student = Students::updateOrCreate($data);
+                                }
+
+                            }
+                            // dd("exists==".$filePath);
+                            Log::info('active report file save to database');
+                            
+
+                        } catch (UnavailableStream|Exception $e) {
+                            // return response()->json(['message' => $e->getMessage()], 400);
+                            Log::error('active report api save data error: ' . $e->getMessage());
+                        }
+                    }
 
                     return $get_data;
                 }
@@ -574,6 +745,80 @@ class ScrapeWebsite extends Command
                 foreach($data as $key => $reports){
 
                     $get_data = $this->apiReports($reports['id']);
+
+                    $file_path = 'public/reports/' . $get_data.'.csv';
+                    
+                    if (Storage::exists($file_path)) {
+                        
+                        try {
+                            $filePath = Storage::path($file_path);
+                            $content = file($filePath);
+                            $array = array();
+
+                            for ($i = 1; $i < count($content); $i++) {
+                                $line = explode(',', $content[$i]);
+                                for ($j = 0; $j < count($line); $j++) {
+                                    $array[$i][$j + 1] = $line[$j];
+                                }
+                            }
+
+                            $k = $k2 = count($array) + 1;
+
+                            $address_1 = null;
+                            $address_2 = null;
+                            $city = null;
+                            $country_code = null;
+                            $zip = null;
+
+
+                            if($array[1]){
+                                $address_1 = $array[1][1];
+                            }
+                            if($array[2]){
+                                $address_2 = $array[2][1];
+                                $city = $array[2][2];
+                                $country_code = $array[2][3];
+                                $zip = $array[2][4];
+                            }
+
+                            $student_arr_data = null;
+
+                            // dd($array);
+
+                            for ($i = 1; $i < $k; $i++) {
+                                
+                                if($i>4){  // $i>4
+
+                                    $student_arr_data = explode(";",$array[$i][1]);
+                                    
+                                    $data = [
+                                        'fname' => $student_arr_data[0] == '' ? null : $student_arr_data[0],
+                                        'lname' => $student_arr_data[1] == '' ? null : $student_arr_data[1],
+                                        'room' => $student_arr_data[2] == '' ? null : $student_arr_data[2],
+                                        'type' => 'inactive',
+                                        'adminssion_date' => $student_arr_data[3] == '' ? null : \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($student_arr_data[3]),
+                                        'graduation_date' => $student_arr_data[4] == '' ? null : \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($student_arr_data[4]),
+                                        'nj_area' => $address_1 == '' ? null : str_replace(";","",$address_1),
+                                        'address' => $address_2 == '' ? null : $address_2,
+                                        'city' => $city == '' ? null : $city,
+                                        'country_code' => $country_code == '' ? null : $country_code,
+                                        'zip' => str_replace(";","",$zip),
+                                        'enrollment_status' => $student_arr_data[5] == '' ? null : $student_arr_data[5],
+                                    ];
+
+                                    $student = Students::updateOrCreate($data);
+                                }
+
+                            }
+                            // dd("exists==".$filePath);
+                            Log::info('inactive report file save to database');
+                            
+
+                        } catch (UnavailableStream|Exception $e) {
+                            // return response()->json(['message' => $e->getMessage()], 400);
+                            Log::error('inactive report api save data error: ' . $e->getMessage());
+                        }
+                    }
 
                     return $get_data;
                 }

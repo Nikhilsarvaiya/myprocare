@@ -15,12 +15,15 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FoodTypeController;
 use App\Http\Controllers\Admin\RestaurantTypeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\StudentsController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->middleware(['auth','role:admin'])->group(function (){
     Route::get('dashboard',[\App\Http\Controllers\Admin\DashboardController::class,'index'])->name('dashboard');
 
     Route::resource('users', UserController::class);
+
+    Route::resource('students', StudentsController::class);
 
     Route::resource('events', EventController::class);
 

@@ -172,6 +172,14 @@
                         <i class="fa-solid fa-user fa-lg ms-1"></i>
                     </x-web.sidebar-menu>
 
+                    <x-web.sidebar-menu
+                        :label="'Students'"
+                        :href="route('admin.students.index')"
+                        :active="request()->routeIs('admin.students.index')"
+                    >
+                        <i class="fa-solid fa-user fa-lg ms-1"></i>
+                    </x-web.sidebar-menu>
+
                     {{-- <x-web.sidebar-menu
                         :label="'Events'"
                         :href="route('admin.events.index')"
