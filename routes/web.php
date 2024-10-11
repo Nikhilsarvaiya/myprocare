@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/api-login', [ScrapingController::class, 'getLoginApiData']);
 Route::get('/api-report', [ScrapingController::class, 'apiReport']);
 Route::get('/api-hold-report', [ScrapingController::class, 'apiHoldReport']);
-Route::get('/api-call-report', [ScrapingController::class, 'callReports']);
+Route::get('/api-call-report', [ScrapingController::class, 'callReports'])->name('api-call-report');
 
 
 // Route::get('/', function () {
