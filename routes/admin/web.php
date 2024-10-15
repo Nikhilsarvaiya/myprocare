@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\FoodTypeController;
 use App\Http\Controllers\Admin\RestaurantTypeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\StudentsController;
+use App\Http\Controllers\Admin\CentersController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->middleware(['auth','role:admin'])->group(function (){
@@ -24,6 +25,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','role:admin'])->group
     Route::resource('users', UserController::class);
 
     Route::resource('students', StudentsController::class);
+
+    Route::resource('centers', CentersController::class);
 
     Route::resource('events', EventController::class);
 

@@ -180,6 +180,14 @@
                         <i class="fa-solid fa-user fa-lg ms-1"></i>
                     </x-web.sidebar-menu>
 
+                    <x-web.sidebar-menu
+                        :label="'Centers'"
+                        :href="route('admin.centers.index')"
+                        :active="request()->routeIs('admin.centers.index')"
+                    >
+                        <i class="fa-solid fa-user fa-lg ms-1"></i>
+                    </x-web.sidebar-menu>
+
                     {{-- <x-web.sidebar-menu
                         :label="'Events'"
                         :href="route('admin.events.index')"
