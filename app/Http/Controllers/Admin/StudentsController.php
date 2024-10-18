@@ -29,7 +29,7 @@ class StudentsController extends Controller
             })
             ->when($request->centers, function ($query) use ($request) {
                 $query->where(function ($query) use ($request) {
-                    $query->where('city', 'like', "%$request->centers%");
+                    $query->where('nj_area', 'like', "%$request->centers%");
                 });
             })
             ->orderBy(request('orderKey') ?? 'id', request('orderDirection') ?? 'desc')

@@ -74,6 +74,7 @@
             ['name' => 'room', 'label' => 'Room', 'sortable' => true],
             ['name' => 'enrollment_status', 'label' => 'Enrollment Status', 'sortable' => false],
             ['name' => 'type', 'label' => 'Type', 'sortable' => true],
+            ['name' => 'nj_area', 'label' => 'Centers', 'sortable' => true],
             ['name' => 'address', 'label' => 'Address', 'sortable' => true],
             ['name' => 'adminssion_date', 'label' => 'Adminssion Date', 'sortable' => true],
             ['name' => 'graduation_date', 'label' => 'Graduation Date', 'sortable' => true],
@@ -91,6 +92,7 @@
                 <x-table.td>{{ $user->room }}</x-table.td>
                 <x-table.td>{{ $user->enrollment_status }}</x-table.td>
                 <x-table.td>{{ $user->type }}</x-table.td>
+                <x-table.td>{{ $user->nj_area }}</x-table.td>
                 <x-table.td>{{ $user->address }}, {{ $user->city }}, {{ $user->country_code }}, {{ $user->zip }}</x-table.td>
                 <x-table.td>{{ $user->adminssion_date ? date('Y-m-d ', strtotime($user->adminssion_date)) : "-" }}</x-table.td>
                 <x-table.td>{{ $user->graduation_date ? date('Y-m-d ', strtotime($user->graduation_date)) : "-" }}</x-table.td>

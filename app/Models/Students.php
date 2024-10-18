@@ -17,6 +17,7 @@ class Students extends Model implements HasMedia
         'lname',
         'room',
         'enrollment_status',
+        'center',
         'type',
         'nj_area',
         'address',
