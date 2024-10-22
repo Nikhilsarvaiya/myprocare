@@ -13,7 +13,9 @@ class Centers extends Model
 
     protected $fillable = [
         'name',
+        'capacity',
+        'goal',
     ];
 
-    public $sortable = ['id', 'name'];
+    public $sortable = ['id', 'name', 'capacity', 'goal'];
 }

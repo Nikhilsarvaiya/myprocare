@@ -30,6 +30,8 @@
         $columns = [
             ['name' => 'id', 'label' => 'Id', 'sortable' => true],
             ['name' => 'name', 'label' => 'Name', 'sortable' => true],
+            ['name' => 'capacity', 'label' => 'Capacity', 'sortable' => true],
+            ['name' => 'goal', 'label' => 'Goal', 'sortable' => true],
             ['name' => 'created_at', 'label' => 'Created At', 'sortable' => true],
             ['name' => 'updated_at', 'label' => 'Updated At', 'sortable' => true],
             ['name' => 'action', 'label' => 'Action', 'sortable' => false],
@@ -41,6 +43,8 @@
             <x-table.tr>
                 <x-table.td :th="true">{{ $center->id }}</x-table.td>
                 <x-table.td>{{ $center->name }}</x-table.td>
+                <x-table.td>{{ $center->capacity ?? '-' }}</x-table.td>
+                <x-table.td>{{ $center->goal.' %' ?? '0 %' }}</x-table.td>
                 <x-table.td>{{ $center->created_at->diffForHumans() }}</x-table.td>
                 <x-table.td>{{ $center->updated_at->diffForHumans() }}</x-table.td>
                 <x-table.td>

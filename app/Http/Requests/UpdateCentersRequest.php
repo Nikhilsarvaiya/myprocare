@@ -23,6 +23,8 @@ class UpdateCentersRequest extends FormRequest
     {
         return [
             'name' => ['string', 'max:255'],
+            'capacity' => [''],
+            'goal' => ['max:100'],
         ];
     }
 }

@@ -32,6 +32,11 @@ class StudentsController extends Controller
                     $query->where('nj_area', 'like', "%$request->centers%");
                 });
             })
+            ->when($request->type, function ($query) use ($request) {
+                $query->where(function ($query) use ($request) {
+                    $query->where('type', 'like', "%$request->type%");
+                });
+            })
             ->orderBy(request('orderKey') ?? 'id', request('orderDirection') ?? 'desc')
             ->paginate(10);
 
@@ -41,7 +46,8 @@ class StudentsController extends Controller
         $centers = Centers::get();
 
         isset(request()->centers) ? $allcenters = request()->centers : $allcenters = '';
+        isset(request()->type) ? $alltype = request()->type : $alltype = '';
 
-        return view('admin.students.students-index', compact('students', 'centers', 'allcenters'));
+        return view('admin.students.students-index', compact('students', 'centers', 'allcenters', 'alltype'));
     }
 }

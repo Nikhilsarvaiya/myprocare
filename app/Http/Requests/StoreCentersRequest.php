@@ -26,6 +26,8 @@ class StoreCentersRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
+            'capacity' => ['nullable'],
+            'goal' => ['nullable', 'max:100'],
         ];
     }
 }

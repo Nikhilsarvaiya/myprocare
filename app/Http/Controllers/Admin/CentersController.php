@@ -20,7 +20,7 @@ class CentersController extends Controller
         $centers = Centers::query()
             ->when($request->search, function ($query) use ($request) {
                 $query->where(function ($query) use ($request) {
-                    $query->where('name', 'like', "%$request->search%");
+                    $query->where('name', 'like', "%$request->search%")->orWhere('capacity', 'like', "%$request->search%")->orWhere('goal', 'like', "%$request->search%");
                 });
             })
             ->orderBy(request('orderKey') ?? 'id', request('orderDirection') ?? 'desc')
@@ -54,8 +54,11 @@ class CentersController extends Controller
     {
         // array filter for remove null values from validated
         // $centers->update(array_filter($request->validated()));
+
         $centers = Centers::find($request->id);
         $centers->name = $request->name;
+        $centers->capacity = $request->capacity;
+        $centers->goal = $request->goal;
         $centers->save();
         return redirect()->route('admin.centers.index');
     }

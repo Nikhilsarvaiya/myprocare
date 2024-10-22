@@ -38,6 +38,41 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2"/>
         </div>
 
+        <div>
+            <x-input-label class="mt-2" for="capacity" :value="__('Capacity')"/>
+
+            <x-text-input
+                id="capacity"
+                class="block mt-1 w-full"
+                type="number"
+                name="capacity"
+                :value="old('capacity') ?? $center->capacity"
+                min="0"
+                required
+                autofocus
+            />
+
+            <x-input-error :messages="$errors->get('capacity')" class="mt-2"/>
+        </div>
+
+        <div>
+            <x-input-label class="mt-2" for="goal" :value="__('Goal')"/>
+
+            <x-text-input
+                id="goal"
+                class="block mt-1 w-full"
+                type="number"
+                name="goal"
+                :value="old('goal') ?? $center->goal"
+                min="0"
+                max="100"
+                required
+                autofocus
+            />
+
+            <x-input-error :messages="$errors->get('goal')" class="mt-2"/>
+        </div>
+
         <x-primary-button class="mt-4" type="submit">
             {{ __('Save') }}
         </x-primary-button>

@@ -35,6 +35,14 @@
                         @endforeach
                     </select>
                 </div>
+                <div class="relative grow">
+                    <select class="form-control block w-full z-20 text-xs text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" name="type" id="type">
+                        <option value="" >Select type</option>
+                        <option value="active" {{ $alltype == 'active' ? ' selected="selected"' : '' }}>active</option>
+                        <option value="inactive" {{ $alltype == 'inactive' ? ' selected="selected"' : '' }}>inactive</option>
+                        <option value="hold" {{ $alltype == 'hold' ? ' selected="selected"' : '' }}>hold</option>
+                    </select>
+                </div>
                 <x-secondary-button type="submit">
                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                          viewBox="0 0 20 20">
