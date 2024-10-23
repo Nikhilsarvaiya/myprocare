@@ -17,6 +17,10 @@ use App\Http\Controllers\Admin\RestaurantTypeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\StudentsController;
 use App\Http\Controllers\Admin\CentersController;
+use App\Http\Controllers\Admin\KearnyNorthsController;
+use App\Http\Controllers\Admin\ActiveReportController;
+use App\Http\Controllers\Admin\InActiveReportController;
+use App\Http\Controllers\Admin\HoldReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->middleware(['auth','role:admin'])->group(function (){
@@ -27,6 +31,14 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','role:admin'])->group
     Route::resource('students', StudentsController::class);
 
     Route::resource('centers', CentersController::class);
+
+    Route::resource('kearny-norths', KearnyNorthsController::class);
+
+    Route::resource('active-report', ActiveReportController::class);
+
+    Route::resource('inactive-report', InActiveReportController::class);
+    
+    Route::resource('hold-report', HoldReportController::class);
 
     Route::resource('events', EventController::class);
 

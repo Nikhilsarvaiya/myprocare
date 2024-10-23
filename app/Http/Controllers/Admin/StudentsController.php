@@ -34,7 +34,7 @@ class StudentsController extends Controller
             })
             ->when($request->type, function ($query) use ($request) {
                 $query->where(function ($query) use ($request) {
-                    $query->where('type', 'like', "%$request->type%");
+                    $query->where('type', $request->type);
                 });
             })
             ->orderBy(request('orderKey') ?? 'id', request('orderDirection') ?? 'desc')

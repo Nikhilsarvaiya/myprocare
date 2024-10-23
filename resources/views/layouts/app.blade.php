@@ -185,7 +185,30 @@
                         :href="route('admin.centers.index')"
                         :active="request()->routeIs('admin.centers.index')"
                     >
-                        <i class="fa-solid fa-user fa-lg ms-1"></i>
+                        <i class="fa-solid fa-earth-americas fa-lg ms-1"></i>
+                    </x-web.sidebar-menu>
+
+                    <x-web.sidebar-menu
+                        :label="'Kearny North'"
+                        :href="route('admin.kearny-norths.index')"
+                        :active="request()->routeIs('admin.kearny-norths.index')"
+                    >
+                        <i class="fa-solid fa-location-arrow fa-lg ms-1"></i>
+                    </x-web.sidebar-menu>
+
+                    @php
+                        $dropdownItems = [
+                            (object)["label" => "Active", "href" => route('admin.active-report.index'), "active" => request()->routeIs('admin.active-report.index')],
+                            (object)["label" => "In Active", "href" => route('admin.inactive-report.index'), "active" => request()->routeIs('admin.inactive-report.index')],
+                            (object)["label" => "Hold", "href" => route('admin.hold-report.index'), "active" => request()->routeIs('admin.hold-report.index')],
+                        ];
+                    @endphp
+
+                    <x-web.sidebar-menu
+                        :label="'Reports'"
+                        :dropdown-items="$dropdownItems"
+                    >
+                        <i class="fa-solid fa-gear fa-lg"></i>
                     </x-web.sidebar-menu>
 
                     {{-- <x-web.sidebar-menu
