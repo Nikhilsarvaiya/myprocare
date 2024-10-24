@@ -8,8 +8,8 @@
                 <img src="{{ asset('images/front/hero1.jpeg') }}" alt="hero image">
             </div>
             <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Easy Mobile Payments and On-Demand Account Records</h1>
-                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Enjoy the convenience of paying your child care tuition on the go through the integration of Tuition Express® and MyProcare®. Families can access account balances and payment history at any time.</p>
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">What is Lorem Ipsum?</h1>
+                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
                 <img src="{{ asset('images/front/hero1.jpeg') }}" alt="hero image">
@@ -31,12 +31,6 @@
                             <a href="#" class=" hover:underline">About</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Careers</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Brand Center</a>
-                        </li>
-                        <li class="mb-4">
                             <a href="#" class="hover:underline">Blog</a>
                         </li>
                     </ul>
@@ -53,9 +47,6 @@
                         <li class="mb-4"><a href="#" class="hover:underline">
                             </a><a href="#" class="hover:underline">Contact Us</a>
                         </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Account Delete Request</a>
-                        </li>
                     </ul>
                 </div>
                 <div>
@@ -63,9 +54,6 @@
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Privacy Policy</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Licensing</a>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Terms & Conditions</a>
@@ -78,11 +66,6 @@
                         <li class="mb-4">
                             <a href="#" class=" hover:underline">About</a>
                         </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Careers</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Brand Center</a>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Blog</a>
@@ -93,10 +76,10 @@
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
             <div class="text-center">
                 <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img src="{{ asset('images/front/hero.png') }}" class="h-6 mr-3 sm:h-9" alt="My Procare Logo">
+                    {{-- <img src="{{ asset('images/front/hero.png') }}" class="h-6 mr-3 sm:h-9" alt="My Procare Logo"> --}}
                     My Procare
                 </a>
-                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024-2025 My Procare. All Rights Reserved.</span>
+                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024-{{date('Y', strtotime('+1 year'))}} My Procare. All Rights Reserved.</span>
                 <ul class="flex justify-center mt-5 space-x-5">
                     <li>
                         <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">

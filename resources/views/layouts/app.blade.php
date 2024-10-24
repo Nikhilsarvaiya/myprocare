@@ -58,9 +58,9 @@
                     </svg>
                 </button>
                 <a href="{{ route('welcome') }}" class="flex items-center justify-between">
-                    <x-application-logo class="mr-3 w-10 h-10 fill-current text-gray-500"/>
+                    {{-- <x-application-logo class="mr-3 w-10 h-10 fill-current text-gray-500"/> --}}
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        DBA
+                        My Procare
                     </span>
                 </a>
             </div>
@@ -113,22 +113,6 @@
                                         class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                                     >
                                         My profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="{{ route('user.wallet-transactions.index') }}"
-                                        class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                                    >
-                                        Wallet
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="{{ route('profile.my-qr') }}"
-                                        class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                                    >
-                                        My QR
                                     </a>
                                 </li>
                             </ul>
@@ -189,6 +173,53 @@
                     </x-web.sidebar-menu>
 
                     <x-web.sidebar-menu
+                        :label="'Students'"
+                        :href="route('admin.students.index')"
+                        :active="request()->routeIs('admin.students.index')"
+                    >
+                        <i class="fa-solid fa-user fa-lg ms-1"></i>
+                    </x-web.sidebar-menu>
+
+                    <x-web.sidebar-menu
+                        :label="'Centers'"
+                        :href="route('admin.centers.index')"
+                        :active="request()->routeIs('admin.centers.index')"
+                    >
+                        <i class="fa-solid fa-earth-americas fa-lg ms-1"></i>
+                    </x-web.sidebar-menu>
+
+                    @php
+                        $dropdownItemsKearyNorth = [
+                            (object)["label" => "Kearny North", "href" => route('admin.kearny-norths.index'), "active" => request()->routeIs('admin.kearny-norths.index')],
+                            (object)["label" => "Students Per Rooms", "href" => route('admin.students-per-rooms.index'), "active" => request()->routeIs('admin.students-per-rooms.index')],
+                            (object)["label" => "Active Students", "href" => route('admin.active-students.index'), "active" => request()->routeIs('admin.active-students.index')],
+                            (object)["label" => "Inactive Students", "href" => route('admin.inactive-students.index'), "active" => request()->routeIs('admin.inactive-students.index')],
+                        ];
+                    @endphp
+
+                    <x-web.sidebar-menu
+                        :label="'Kearny North'"
+                        :dropdown-items="$dropdownItemsKearyNorth"
+                    >
+                    <i class="fa-solid fa-location-arrow fa-lg ms-1"></i>
+                    </x-web.sidebar-menu>
+
+                    @php
+                        $dropdownItems = [
+                            (object)["label" => "Active", "href" => route('admin.active-report.index'), "active" => request()->routeIs('admin.active-report.index')],
+                            (object)["label" => "In Active", "href" => route('admin.inactive-report.index'), "active" => request()->routeIs('admin.inactive-report.index')],
+                            (object)["label" => "Hold", "href" => route('admin.hold-report.index'), "active" => request()->routeIs('admin.hold-report.index')],
+                        ];
+                    @endphp
+
+                    <x-web.sidebar-menu
+                        :label="'Reports'"
+                        :dropdown-items="$dropdownItems"
+                    >
+                        <i class="fa-solid fa-gear fa-lg"></i>
+                    </x-web.sidebar-menu>
+
+                    {{-- <x-web.sidebar-menu
                         :label="'Events'"
                         :href="route('admin.events.index')"
                         :active="request()->routeIs('admin.events.index')"
@@ -196,7 +227,7 @@
                         <i class="fa-regular fa-calendar fa-lg ms-1"></i>
                     </x-web.sidebar-menu>
 
-                    <x-web.sidebar-menu
+                     <x-web.sidebar-menu
                         :label="'Deals'"
                         :href="route('admin.deals.index')"
                         :active="request()->routeIs('admin.deals.index')"
@@ -271,7 +302,7 @@
                         :dropdown-items="$dropdownItems"
                     >
                         <i class="fa-solid fa-gear fa-lg"></i>
-                    </x-web.sidebar-menu>
+                    </x-web.sidebar-menu> --}}
                 @else
                     <x-web.sidebar-menu
                         :label="'Dashboard'"
@@ -290,7 +321,7 @@
                         </svg>
                     </x-web.sidebar-menu>
 
-                    <x-web.sidebar-menu
+                    {{-- <x-web.sidebar-menu
                         :label="'Events'"
                         :href="route('user.events.index')"
                         :active="request()->routeIs('user.events.index')"
@@ -344,7 +375,7 @@
                         :active="request()->routeIs('user.road-closures.index')"
                     >
                         <i class="fa-solid fa-road-circle-exclamation fa-lg"></i>
-                    </x-web.sidebar-menu>
+                    </x-web.sidebar-menu> --}}
                 @endif
             </ul>
         </div>

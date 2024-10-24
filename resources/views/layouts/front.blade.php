@@ -60,11 +60,125 @@
                 </button>
 
                 <a href="/" class="flex items-center justify-between">
-                    <x-application-logo class="mr-3 w-10 h-10 fill-current text-gray-500"/>
+                    {{-- <x-application-logo class="mr-3 w-10 h-10 fill-current text-gray-500"/> --}}
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                         My Procare
                     </span>
                 </a>
+            </div>
+            <div class="flex items-center lg:order-2 space-x-4">
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-4">
+                        @php
+                            $navigations = [
+                                [ 'title' => 'Home', 'url' => route('welcome'), 'active' => request()->routeIs('welcome')],
+                                [ 'title' => 'Blog', 'url' => '#', 'active' => false],
+                                [ 'title' => 'About', 'url' => '#', 'active' => false],
+                                [ 'title' => 'Contact', 'url' => '#', 'active' => false],
+                             ];
+                        @endphp
+                        @foreach($navigations as $navigation)
+                            <a href="{{ $navigation['url'] }}"
+                               class="hover:text-blue-700 dark:hover:text-white {{ $navigation['active'] ? 'text-blue-700 dark:text-white' : 'text-gray-700 dark:text-gray-400' }}">
+                                {{ $navigation['title'] }}
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+
+                <x-toogle-theme/>
+
+                @if(!\Illuminate\Support\Facades\Auth::check())
+                    <a href="{{ route('login') }}">
+                        <x-secondary-button>
+                            Login
+                        </x-secondary-button>
+                    </a>
+                @endif
+
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <x-dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button
+                                type="button"
+                                class="flex text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                                id="user-menu-button"
+                                aria-expanded="false"
+                                data-dropdown-toggle="dropdown"
+                            >
+                                <span class="sr-only">Open user menu</span>
+                                <x-user-avatar :name="\Illuminate\Support\Facades\Auth::user()->name"
+                                               class="!h-8 !w-8"/>
+                            </button>
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <!-- Dropdown menu -->
+                            <div
+                                class="z-50 text-base list-none bg-white rounded divide-y divide-gray-100 dark:bg-gray-700 dark:divide-gray-600 rounded-xl text-gray-900 dark:text-gray-300"
+                                id="dropdown"
+                            >
+                                <div class="py-3 px-4">
+                                    <span class="block text-sm font-semibold">
+                                        {{ \Illuminate\Support\Facades\Auth::user()->name }}
+                                    </span>
+                                    <span class="block text-sm truncate">
+                                        {{ \Illuminate\Support\Facades\Auth::user()->email }}
+                                    </span>
+                                </div>
+                                <ul
+                                    class="py-1"
+                                    aria-labelledby="dropdown"
+                                >
+                                    <li>
+                                        <a
+                                            href="{{ route('user.dashboard') }}"
+                                            class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        >Dashboard
+                                        </a>
+                                    </li>
+                                    @if(\Illuminate\Support\Facades\Auth::user()->hasRole('admin'))
+                                        <li>
+                                            <a
+                                                href="{{ route('admin.dashboard') }}"
+                                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                                            >Admin Dashboard
+                                            </a>
+                                        </li>
+                                    @endif
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        >My profile</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        >Account settings</a>
+                                    </li>
+                                </ul>
+                                <ul
+                                    class="pt-1"
+                                    aria-labelledby="dropdown"
+                                >
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button
+                                                class="w-full block py-2 px-4 text-sm text-left hover:bg-gray-100 dark:hover:bg-gray-600"
+                                                onclick="event.preventDefault(); this.closest('form').submit();"
+                                            >
+                                                {{ __('Log Out') }}
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </x-slot>
+                    </x-dropdown>
+                @endif
             </div>
         </div>
     </nav>
