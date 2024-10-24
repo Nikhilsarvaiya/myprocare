@@ -21,6 +21,9 @@ use App\Http\Controllers\Admin\KearnyNorthsController;
 use App\Http\Controllers\Admin\ActiveReportController;
 use App\Http\Controllers\Admin\InActiveReportController;
 use App\Http\Controllers\Admin\HoldReportController;
+use App\Http\Controllers\Admin\KearnyNorthsStudentsPerRoomsController;
+use App\Http\Controllers\Admin\KearnyNorthsActiveStudentsController;
+use App\Http\Controllers\Admin\KearnyNorthsInActiveStudentsController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->middleware(['auth','role:admin'])->group(function (){
@@ -33,6 +36,10 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','role:admin'])->group
     Route::resource('centers', CentersController::class);
 
     Route::resource('kearny-norths', KearnyNorthsController::class);
+
+    Route::resource('students-per-rooms', KearnyNorthsStudentsPerRoomsController::class);
+    Route::resource('active-students', KearnyNorthsActiveStudentsController::class);
+    Route::resource('inactive-students', KearnyNorthsInActiveStudentsController::class);
 
     Route::resource('active-report', ActiveReportController::class);
 

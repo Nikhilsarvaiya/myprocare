@@ -45,4 +45,8 @@
             <x-table.td>{{ round($data['total_score'], 2) }}%</x-table.td>
         </x-table.tr>
     </x-table.main>
+
+    <div class="py-4"></div>
+
+    
 @endsection

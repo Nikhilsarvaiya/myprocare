@@ -188,12 +188,20 @@
                         <i class="fa-solid fa-earth-americas fa-lg ms-1"></i>
                     </x-web.sidebar-menu>
 
+                    @php
+                        $dropdownItemsKearyNorth = [
+                            (object)["label" => "Kearny North", "href" => route('admin.kearny-norths.index'), "active" => request()->routeIs('admin.kearny-norths.index')],
+                            (object)["label" => "Students Per Rooms", "href" => route('admin.students-per-rooms.index'), "active" => request()->routeIs('admin.students-per-rooms.index')],
+                            (object)["label" => "Active Students", "href" => route('admin.active-students.index'), "active" => request()->routeIs('admin.active-students.index')],
+                            (object)["label" => "Inactive Students", "href" => route('admin.inactive-students.index'), "active" => request()->routeIs('admin.inactive-students.index')],
+                        ];
+                    @endphp
+
                     <x-web.sidebar-menu
                         :label="'Kearny North'"
-                        :href="route('admin.kearny-norths.index')"
-                        :active="request()->routeIs('admin.kearny-norths.index')"
+                        :dropdown-items="$dropdownItemsKearyNorth"
                     >
-                        <i class="fa-solid fa-location-arrow fa-lg ms-1"></i>
+                    <i class="fa-solid fa-location-arrow fa-lg ms-1"></i>
                     </x-web.sidebar-menu>
 
                     @php
